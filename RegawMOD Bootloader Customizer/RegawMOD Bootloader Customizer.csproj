@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2DB1828A-097C-47DD-94CE-FD5815921D9E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RegawMOD_Bootloader_Customizer</RootNamespace>
+    <AssemblyName>RegawMOD Bootloader Customizer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\RegawMOD.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dependencies\Zip\BZip2\BitWriter.cs" />
+    <Compile Include="Dependencies\Zip\BZip2\BZip2Compressor.cs" />
+    <Compile Include="Dependencies\Zip\BZip2\BZip2InputStream.cs" />
+    <Compile Include="Dependencies\Zip\BZip2\BZip2OutputStream.cs" />
+    <Compile Include="Dependencies\Zip\BZip2\ParallelBZip2OutputStream.cs" />
+    <Compile Include="Dependencies\Zip\BZip2\Rand.cs" />
+    <Compile Include="Dependencies\Zip\CRC32.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ComHelper.cs" />
+    <Compile Include="Dependencies\Zip\Zip\EncryptionAlgorithm.cs" />
+    <Compile Include="Dependencies\Zip\Zip\Events.cs" />
+    <Compile Include="Dependencies\Zip\Zip\Exceptions.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ExtractExistingFileAction.cs" />
+    <Compile Include="Dependencies\Zip\Zip\FileSelector.cs" />
+    <Compile Include="Dependencies\Zip\Zip\OffsetStream.cs" />
+    <Compile Include="Dependencies\Zip\Zip\Shared.cs" />
+    <Compile Include="Dependencies\Zip\Zip\WinZipAes.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipConstants.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipCrypto.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipDirEntry.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipEntry.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipEntry.Extract.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipEntry.Read.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipEntry.Write.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipEntrySource.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipErrorAction.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipFile.AddUpdate.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipFile.Check.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipFile.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipFile.Events.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipFile.Extract.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipFile.Read.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipFile.Save.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipFile.SaveSelfExtractor.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipFile.Selector.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipFile.x-IEnumerable.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipInputStream.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipOutputStream.cs" />
+    <Compile Include="Dependencies\Zip\Zip\ZipSegmentedStream.cs" />
+    <Compile Include="Dependencies\Zip\Zlib\Deflate.cs" />
+    <Compile Include="Dependencies\Zip\Zlib\DeflateStream.cs" />
+    <Compile Include="Dependencies\Zip\Zlib\GZipStream.cs" />
+    <Compile Include="Dependencies\Zip\Zlib\Inflate.cs" />
+    <Compile Include="Dependencies\Zip\Zlib\InfTree.cs" />
+    <Compile Include="Dependencies\Zip\Zlib\ParallelDeflateOutputStream.cs" />
+    <Compile Include="Dependencies\Zip\Zlib\Tree.cs" />
+    <Compile Include="Dependencies\Zip\Zlib\Zlib.cs" />
+    <Compile Include="Dependencies\Zip\Zlib\ZlibBaseStream.cs" />
+    <Compile Include="Dependencies\Zip\Zlib\ZlibCodec.cs" />
+    <Compile Include="Dependencies\Zip\Zlib\ZlibConstants.cs" />
+    <Compile Include="Dependencies\Zip\Zlib\ZlibStream.cs" />
+    <Compile Include="Classes\Plugin\Enums.cs" />
+    <Compile Include="Classes\Plugin\IBootloaderPlugin.cs" />
+    <Compile Include="MainForm - BuildZip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm - Events.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PluginInfo.Designer.cs">
+      <DependentUpon>PluginInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SplashText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashText.Designer.cs">
+      <DependentUpon>SplashText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Util.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PluginInfo.resx">
+      <DependentUpon>PluginInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SplashText.resx">
+      <DependentUpon>SplashText.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RegawMOD.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_5279_EDIT2.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
