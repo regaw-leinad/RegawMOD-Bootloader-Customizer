@@ -76,7 +76,9 @@ namespace RegawMOD.Android
         [Description("HTC One (Sprint)")]
         M7SPR,
         [Description("HTC One (TMobile)")]
-        M7TMO
+        M7TMO,
+        [Description("HTC One (Verizon)")]
+        M7VZW
     }
 
     internal class EnumHelper
